@@ -253,7 +253,6 @@ body::after {
   transition: transform 0.3s ease 0s;
   width: 90%;
   max-width: 900px;
-  max-height: 90vh;
   border-radius: 30px;
   border: 10px solid transparent;
 }
@@ -4113,6 +4112,9 @@ input[type=submit] {
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 15px 10px;
+}
+.boxforinp input[type=submit] {
+  color: black;
 }
 @media (max-width: 850px) {
   .boxforinp {
