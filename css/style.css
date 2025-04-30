@@ -3962,6 +3962,14 @@ p.catlabel {
   background-color: #eed05d;
 }
 
+/* стили инпута типа сабмит */
+input[type=submit] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* конец стили инпута типа сабмит */
 .popup__content .contactsus_form {
   margin-top: 0;
 }
