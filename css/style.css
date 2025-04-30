@@ -219,6 +219,7 @@ body::after {
   visibility: hidden;
   pointer-events: none;
   background-color: rgba(0, 0, 255, 0.1);
+  background-color: #64646460;
 }
 
 .popup_show {
@@ -250,20 +251,19 @@ body::after {
   visibility: hidden;
   transform: scale(0);
   transition: transform 0.3s ease 0s;
-  background-color: #eee;
-  width: 80%;
+  width: 90%;
   max-width: 900px;
   max-height: 90vh;
-  overflow-x: auto;
-  border-radius: 20px;
+  border-radius: 30px;
   border: 10px solid transparent;
 }
 .lock .popup__content {
   visibility: visible;
 }
 .popup__content::-webkit-scrollbar {
-  width: 5px;
+  width: 1px;
   /* ширина scrollbar */
+  height: 1px;
 }
 .popup__content::-webkit-scrollbar-track {
   background: transparent;
@@ -271,7 +271,7 @@ body::after {
   border-radius: 20px;
 }
 .popup__content::-webkit-scrollbar-thumb {
-  background-color: gray;
+  background-color: red;
   /* цвет плашки */
   border-radius: 20px;
   /* закругления плашки */
@@ -279,11 +279,19 @@ body::after {
 
 .popup__close {
   text-transform: uppercase;
-  font-size: 6vw;
+  font-size: 16px;
   position: absolute;
-  right: 0%;
-  top: 0%;
+  right: -20px;
+  top: -20px;
   padding: 10px;
+  background-color: #eed05d;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
 }
 
 [data-sticky] {
@@ -2620,6 +2628,7 @@ body::after {
   font-size: 14px;
   line-height: 1.2;
   width: auto;
+  background: white;
 }
 .btn:hover {
   padding: 10px 60px 10px 10px;
@@ -3951,6 +3960,179 @@ p.catlabel {
   height: 10px;
   border: 1px solid #eed05d;
   background-color: #eed05d;
+}
+
+.popup__content .contactsus_form {
+  margin-top: 0;
+}
+.popup__content .contactsus_form form .productboxforinp {
+  flex: 0 0 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.popup__content .contactsus_form form .productboxforinp input {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: left;
+}
+.popup__content .contactsus_form form > .boxforinp {
+  width: 100%;
+}
+.popup__content .contactsus_form form > .boxforinp input {
+  width: 100%;
+}
+.popup__content .contactsus_form form .boxforinp input[type=submit] {
+  width: auto;
+}
+@media (max-width: 850px) {
+  .popup__content {
+    flex-wrap: wrap;
+  }
+  .popup__content .contactsus_form {
+    flex: 0 0 100%;
+    order: 2;
+  }
+  .popup__content .contactsus_form form .productboxforinp input {
+    font-size: 14px;
+  }
+}
+
+.popup__contentform {
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+.popup__contentform .contactsus_form {
+  flex: 0 1 100%;
+}
+.popup__contentform .popup__img {
+  flex: 0 0 40%;
+  height: 200px;
+  position: relative;
+}
+.popup__contentform .popup__img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+@media (max-width: 850px) {
+  .popup__contentform {
+    flex-wrap: wrap;
+  }
+  .popup__contentform .contactsus_form {
+    flex: 0 0 100%;
+    order: 2;
+  }
+  .popup__contentform .contactsus_form form .productboxforinp input {
+    font-size: 14px;
+    text-align: center;
+  }
+  .popup__contentform .popup__img {
+    order: 1;
+    flex: 0 0 100%;
+  }
+}
+
+.contactsus_form {
+  margin-top: 15px;
+  background-color: white;
+  border-radius: 30px;
+  padding: 20px 20px 0 20px;
+}
+.contactsus_form .contactsus_title {
+  text-align: center;
+}
+.contactsus_form .contactsus_text {
+  text-align: center;
+}
+.contactsus_form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contactsus_form form .boxforinps {
+  width: 100%;
+  display: flex;
+}
+.contactsus_form form .boxforinps .boxforinp {
+  flex: 0 1 50%;
+}
+.contactsus_form form .boxforinps > :not(:last-child) {
+  margin-right: 15px;
+}
+@media (max-width: 850px) {
+  .contactsus_form {
+    padding: 15px 10px 0 10px;
+  }
+  .contactsus_form form {
+    align-items: center;
+  }
+  .contactsus_form form .boxforinps {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .contactsus_form form .boxforinps .boxforinp {
+    flex: 0 0 100%;
+  }
+  .contactsus_form form .boxforinps .boxforinp input {
+    width: 100%;
+    font-size: 14px;
+  }
+  .contactsus_form form .boxforinps > :not(:last-child) {
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+.boxforinp {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.boxforinp input:not([type=submit]):not([readonly]) {
+  background-color: white;
+  border-radius: 15px;
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px 10px;
+}
+@media (max-width: 850px) {
+  .boxforinp {
+    padding-bottom: 15px;
+    justify-content: center;
+  }
+  .boxforinp label {
+    font-size: 12px;
+    width: 100%;
+  }
+}
+
+.boxforinpradio {
+  display: flex;
+  align-items: center;
+}
+.boxforinpradio input[type=radio] {
+  margin-right: 10px;
+  flex: 0 0 30px;
+}
+.boxforinpradio label {
+  flex: 0 1 100%;
+  line-height: 1.2;
+}
+@media (max-width: 850px) {
+  .boxforinpradio {
+    width: 230px;
+  }
 }
 .swiper {
   overflow: hidden;
