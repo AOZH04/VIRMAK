@@ -5112,6 +5112,18 @@
         });
     }));
     updateScrollLine();
+    let btnsTexts = document.querySelectorAll("[data-value]");
+    if (btnsTexts) for (let index = 0; index < btnsTexts.length; index++) {
+        const element = btnsTexts[index];
+        let valueBtn = element.getAttribute("data-value");
+        element.addEventListener("click", (function() {
+            let productboxforinps = document.querySelectorAll(".productboxforinp input");
+            if (productboxforinps) for (let index = 0; index < productboxforinps.length; index++) {
+                const element = productboxforinps[index];
+                element.value = valueBtn;
+            }
+        }));
+    }
     window["FLS"] = false;
     menuInit();
     functions_menuClose();
