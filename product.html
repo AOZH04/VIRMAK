@@ -6,7 +6,7 @@
 	<title>Страница Продукта</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250429225751">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250430175627">
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -162,7 +162,7 @@
 							<p>цена:</p>
 							<p class="price fw900">от 1 253 044 ₽</p>
 						</div>
-						<div class="productbody_descs_btn">
+						<div class="productbody_descs_btn" data-popup="#form" data-value="ДОМОКОМПЛЕКТ BARN №1">
 							<a href="#" class="btn">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
 						</div>
 					</div>
@@ -553,7 +553,7 @@
 					<div class="footer_map_lr">
 						<div class="footer_map_left radius15 angle leftangle rightanglecirc">
 							<div class="map radius15">
-								<script charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A78fdcc175f55bdad513b46c97e68013675f2777652efe994f92f496c44d7ca5c&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false&_v=20250429225751">
+								<script charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A78fdcc175f55bdad513b46c97e68013675f2777652efe994f92f496c44d7ca5c&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false&_v=20250430175627">
 								</script>
 							</div>
 						</div>
@@ -680,21 +680,42 @@
 			</div>
 		</footer>
 	</div>
-
-	<div id="popup1" aria-hidden="true" class="popup">
+	<div id="form" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
-			<div class="popup__content">
-				<div class="popup__text">
-					ПОПАП 1! <br>
+			<div class="popup__content popup__contentform">
+				<div class="contactsus_form">
+					<form action="#">
+						<div class="boxforinp productboxforinp">
+							<input placeholder="" readonly>
+						</div>
+						<div class="boxforinp">
+							<input placeholder="ваше имя" autocomplete="off" type="name">
+						</div>
+						<div class="boxforinp">
+							<input placeholder="ваш телефон" autocomplete="off" type="tel">
+						</div>
+						<div class="boxforinp">
+							<input placeholder="ваш регион" autocomplete="off" type="text">
+						</div>
+						<div class="boxforinps">
+							<div class="boxforinp">
+								<input class="btn" type="submit" value="получить консультацию">
+							</div>
+							<div class="boxforinp boxforinpradio">
+								<input type="radio">
+								<label for="radio">Даю согласие на обработку персональных данных</label>
+							</div>
+						</div>
+					</form>
 				</div>
+				<div class="popup__img radius15 angle  rightanglecirc">
+					<img src="img/home1.png" alt="">
+				</div>
+				<button data-close type="button" class="popup__close">x</button>
 			</div>
-			<button data-close type="button" class="popup__close"></button>
 		</div>
 	</div>
-
-
-
-	<script src="js/app.min.js?_v=20250429225751"></script>
+	<script src="js/app.min.js?_v=20250430175627"></script>
 </body>
 
 </html>
